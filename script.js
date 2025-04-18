@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Make the entire body clickable (except the CTA button)
+    document.body.addEventListener('click', function(e) {
+        // Prevent CTA button from triggering body redirect
+        if (!e.target.closest('.cta-button')) {
+            window.location.href = 'https://topgames.bet/'; // Replace with your URL
+        }
+    });
+});
+
 
 // Countdown timer
 function updateCountdown() {
